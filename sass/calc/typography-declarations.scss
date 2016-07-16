@@ -1,0 +1,21 @@
+$primary-font: "Menlo", "Open Sans", "Helvetica", Sans-Serif;
+$secondary-font: "Fira Sans", "Georgia", "Times", "Times New Roman", Serif;
+$accent-font: "Garamond", Serif;
+
+body {
+	font-family: $primary-font;
+	line-height: 1.7;
+}
+
+h1 {
+	@include xlarge;
+}
+h2 {
+	@include large;
+}
+h3 {
+	@include large;
+}
+h4, p {
+	@include medium;
+}

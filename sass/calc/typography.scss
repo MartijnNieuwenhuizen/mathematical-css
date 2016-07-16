@@ -1,0 +1,28 @@
+$interval: 1.5;
+
+$base-font-size: 1em;
+$small-font-size: $base-font-size / $interval;
+$tiny-font-size: $small-font-size / $interval;
+$med-font-size: $base-font-size;
+$large-font-size: $med-font-size * $interval;
+$xlarge-font-size: $large-font-size * $interval;
+$xxlarge-font-size: $xlarge-font-size * $interval;
+
+@mixin tiny {
+	font-size: $tiny-font-size;
+}
+@mixin small {
+	font-size: $small-font-size;
+}
+@mixin medium {
+	font-size: $med-font-size;
+}
+@mixin large {
+	font-size: $large-font-size;
+}
+@mixin xlarge {
+	font-size: $xlarge-font-size;
+}
+@mixin xxlarge {
+	font-size: $xxlarge-font-size;
+}
