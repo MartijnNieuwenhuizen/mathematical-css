@@ -1,0 +1,63 @@
+$colorOptions: Analogous, Monochromatic, Triad, Complementary, Compound, Shades;
+
+// hsla(360, 100, 100, 1);
+
+// HSL is "Hue, Saturation, Lightness"
+// Hue --> the degree on the color wheel
+// Saturation --> 0% = gray, 100% = full color
+// Lightness --> 0% = completely dark, 100% = completely white
+
+// Triad
+// 1. base color
+// 2. darker base color --> more Saturation?
+// 3. 120 more than base
+// 4. darker that 3, same hue
+// 5. 120 more than 3, same hue
+
+@function calulateColors($baseColor, $type){
+    @if( $type = "Triad" ) {
+        $changeSaturateAmount: 10%;
+        $changeHueAmount: 120;
+
+        $baseColor: $baseColor;
+        $secondaryColor: saturate($baseColor, $changeSaturateAmount);
+        $thirdColor: adjust-hue($baseColor, $changeHueAmount);
+        $fourthColor: saturate($thirdColor, $changeSaturateAmount);
+        $fifthColor: adjust-hue($thirdColor, $changeHueAmount);
+
+    }
+}
+
+
+
+
+
+
+
+
+// hsl($hue, $saturation, $lightness)
+// Creates a Color from hue, saturation, and lightness values.
+// hsla($hue, $saturation, $lightness, $alpha)
+// Creates a Color from hue, saturation, lightness, and alpha values.
+// hue($color)
+// Gets the hue component of a color.
+// saturation($color)
+// Gets the saturation component of a color.
+// lightness($color)
+// Gets the lightness component of a color.
+// adjust-hue($color, $degrees)
+// Changes the hue of a color.
+// lighten($color, $amount)
+// Makes a color lighter.
+// darken($color, $amount)
+// Makes a color darker.
+// saturate($color, $amount)
+// Makes a color more saturated.
+// desaturate($color, $amount)
+// Makes a color less saturated.
+// grayscale($color)
+// Converts a color to grayscale.
+// complement($color)
+// Returns the complement of a color.
+// invert($color)
+// Returns the inverse of a color.
